@@ -6,24 +6,19 @@ body {
 }
 
 header {
-    background-color: #333;
+    background-color: #ff69b4;
     color: white;
     padding: 1em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav .logo {
-    font-size: 1.5em;
-    font-weight: bold;
+    text-align: center;
 }
 
 nav ul {
     list-style: none;
     display: flex;
+    justify-content: center;
     margin: 0;
     padding: 0;
+    background-color: #ff1493;
 }
 
 nav ul li {
@@ -33,83 +28,47 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
+    font-weight: bold;
 }
 
-.hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    background: linear-gradient(to right, #ff5f6d, #ffc371);
-    color: white;
-    padding: 2em;
-    text-align: center;
-}
-
-.hero-left {
-    flex: 1;
-}
-
-.hero-left h1 {
-    font-size: 3em;
-    margin: 0;
-}
-
-.hero-left h2 {
-    font-size: 1.5em;
-}
-
-.cta-button {
-    background-color: #ff5722;
-    color: white;
-    padding: 0.7em 1.5em;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 1em;
-}
-
-.cta-button:hover {
-    background-color: #e64a19;
-}
-
-.hero-right img {
+.carousel-container {
+    position: relative;
     max-width: 100%;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carousel-item img {
+    width: 100%;
     height: auto;
-    border-radius: 50%;
+    display: block;
 }
 
-.album {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2em;
-    background-color: white;
-    margin: 2em 0;
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 1em;
+    cursor: pointer;
+    font-size: 2em;
 }
 
-.album-cover img {
-    width: 200px;
-    height: 200px;
-    margin-right: 2em;
+.carousel-button.prev {
+    left: 10px;
 }
 
-.album-details h3 {
-    margin: 0;
-    font-size: 1.5em;
-}
-
-.album-details p {
-    margin: 0.5em 0;
-    font-size: 1em;
-}
-
-.album-details ol {
-    list-style: none;
-    padding: 0;
-}
-
-.album-details ol li {
-    margin: 0.5em 0;
-    font-size: 1em;
-    display: flex;
-    justify-content: space-between;
+.carousel-button.next {
+    right: 10px;
 }

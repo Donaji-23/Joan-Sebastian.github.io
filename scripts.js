@@ -1,25 +1,30 @@
-function reproducirCancion(audioSrc, letra) {
-    const audioPlayer = document.getElementById('audioPlayer');
-    const audioSource = document.getElementById('audioSource');
+let currentIndex = 0;
+const carouselItems = document.querySelectorAll('.carousel-item');
 
-    audioSource.src = audioSrc;
-    audioPlayer.load();
-    audioPlayer.play();
-
-    alert(`Reproduciendo: ${audioSrc}\n\nLetra:\n${letra}`);
+function changeSlide(n) {
+    currentIndex = (currentIndex + n + carouselItems.length) % carouselItems.length;
+    updateCarousel();
 }
 
-function mostrarImagen(src, captionText) {
-    const modal = document.getElementById('modal');
-    const imgModal = document.getElementById('imgModal');
-    const caption = document.getElementById('caption');
-
-    imgModal.src = src;
-    caption.textContent = captionText;
-    modal.style.display = 'block';
-
-    const closeModal = document.getElementsByClassName('close')[0];
-    closeModal.onclick = function() {
-        modal.style.display = 'none';
-    }
+function updateCarousel() {
+    const carousel = document.querySelector('.carousel');
+    const offset = -currentIndex * 100;
+    carousel.style.transform = `translateX(${offset}%)`;
 }
+
+// Automatic sliding
+let autoSlideInterval = setInterval(() => {
+    changeSlide(1);
+}, 3000); // Change slide every 3 seconds
+
+// Pause automatic sliding when hovering over the carousel
+const carouselContainer = document.querySelector('.carousel-container');
+carouselContainer.addEventListener('mouseover', () => {
+    clearInterval(autoSlideInterval);
+});
+
+carouselContainer.addEventListener('mouseout', () => {
+    autoSlideInterval = setInterval(() => {
+        changeSlide(1);
+    }, 3000); // Resume sliding every 3 seconds
+});
