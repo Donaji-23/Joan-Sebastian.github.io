@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joan Sebastian</title>
+    <title>Discografía - Joan Sebastian</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -20,16 +20,21 @@
         </nav>
     </header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Joan Sebastian</h1>
-            <p>Descubre la vida y obra del gran Joan Sebastian.</p>
-            <a href="biografia.html" class="cta-button">Explorar</a>
-        </div>
-        <div class="hero-image">
-            <img src="img/joan-hero.jpg" alt="Joan Sebastian">
+    <section class="discography">
+        <h2>Discografía</h2>
+        <div class="album">
+            <h3>Álbum 1</h3>
+            <ul>
+                <li><a href="#" onclick="reproducirCancion('cancion1.mp3', 'Letra de Canción 1')">Canción 1</a></li>
+                <li><a href="#" onclick="reproducirCancion('cancion2.mp3', 'Letra de Canción 2')">Canción 2</a></li>
+            </ul>
         </div>
     </section>
+
+    <audio id="audioPlayer" controls style="display:none;">
+        <source id="audioSource" src="" type="audio/mpeg">
+        Tu navegador no soporta la reproducción de audio.
+    </audio>
 
     <script src="scripts.js"></script>
 </body>

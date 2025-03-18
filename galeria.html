@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joan Sebastian</title>
+    <title>Galería - Joan Sebastian</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -20,16 +20,18 @@
         </nav>
     </header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Joan Sebastian</h1>
-            <p>Descubre la vida y obra del gran Joan Sebastian.</p>
-            <a href="biografia.html" class="cta-button">Explorar</a>
-        </div>
-        <div class="hero-image">
-            <img src="img/joan-hero.jpg" alt="Joan Sebastian">
+    <section class="gallery">
+        <h2>Galería</h2>
+        <div class="gallery-item">
+            <img src="img/joan1.jpg" alt="Joan Sebastian" onclick="mostrarImagen('img/joan1.jpg', 'Reseña de la foto 1')">
         </div>
     </section>
+
+    <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="imgModal">
+        <div id="caption"></div>
+    </div>
 
     <script src="scripts.js"></script>
 </body>

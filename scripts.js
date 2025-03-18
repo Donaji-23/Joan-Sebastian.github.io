@@ -1,4 +1,3 @@
-
 function reproducirCancion(audioSrc, letra) {
     const audioPlayer = document.getElementById('audioPlayer');
     const audioSource = document.getElementById('audioSource');
