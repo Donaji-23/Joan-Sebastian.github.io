@@ -9,13 +9,13 @@
 <body>
     <header>
         <nav>
-            <div class="logo">Joan Sebastian</div>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="biografia.html">Biografía</a></li>
                 <li><a href="discografia.html">Discografía</a></li>
                 <li><a href="galeria.html">Galería</a></li>
                 <li><a href="videos.html">Videos</a></li>
+                <li><a href="autor.html">Autor</a></li>
             </ul>
         </nav>
     </header>
@@ -25,16 +25,11 @@
         <div class="album">
             <h3>Álbum 1</h3>
             <ul>
-                <li><a href="#" onclick="reproducirCancion('cancion1.mp3', 'Letra de Canción 1')">Canción 1</a></li>
-                <li><a href="#" onclick="reproducirCancion('cancion2.mp3', 'Letra de Canción 2')">Canción 2</a></li>
+                <li><a href="album1.html">Ver Canciones</a></li>
             </ul>
         </div>
+        <!-- Repite para más álbumes -->
     </section>
-
-    <audio id="audioPlayer" controls style="display:none;">
-        <source id="audioSource" src="" type="audio/mpeg">
-        Tu navegador no soporta la reproducción de audio.
-    </audio>
 
     <script src="scripts.js"></script>
 </body>
