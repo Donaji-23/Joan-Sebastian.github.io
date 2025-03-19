@@ -1,203 +1,91 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-}
+ /* Estilos personalizados */
+ * {
+    box-sizing: border-box;
+  }
 
-.vertical-nav {
+  body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    overflow-x: hidden; /* Evita la barra de desplazamiento horizontal */
+  }
+
+  .vertical-nav {
     position: fixed;
     top: 0;
-    right: 0;
-    width: 200px;
-    background-color: rgb(75, 51, 57); /* Color de fondo con transparencia */
+    left: 0;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 250px;
+    background-color: #343a40;
+    color: #fff;
     padding-top: 20px;
-    z-index: 1000; /* Asegura que el menú esté sobre el carrusel */
-}
+    z-index: 1000;
+  }
 
-.vertical-nav ul {
-    list-style: none;
+  .vertical-nav ul {
+    list-style-type: none;
     padding: 0;
     margin: 0;
-    width: 100%;
-}
+  }
 
-.vertical-nav ul li {
-    width: 100%;
-    text-align: center;
-}
+  .vertical-nav ul li {
+    margin-bottom: 15px;
+  }
 
-.vertical-nav ul li a {
-    display: block;
-    padding: 15px 10px;
-    color: white;
+  .vertical-nav ul li a {
+    color: #fff;
     text-decoration: none;
-    transition: background-color 0.3s;
-}
-
-.vertical-nav ul li a:hover {
-    background-color: #495057;
-}
-
-.main-content {
-    margin-left: 0; /* No es necesario margen izquierdo */
-    padding: 0; /* Elimina el padding */
-    margin-right: 200px; /* Ajusta el margen derecho para el menú vertical */
-    height: calc(100% - 40px); /* Ajusta la altura para dejar espacio para el pie de página */
-    width: calc(100% - 200px); /* Ajusta el ancho para evitar superposición con el menú */
-}
-
-.hero-section {
-    padding: 0; /* Elimina el padding para ocupar más espacio */
-    width: 100%; /* Asegura que el carrusel ocupe el ancho completo */
-    height: 100%; /* Asegura que el carrusel ocupe toda la altura */
-    border-radius: 15px; /* Bordes redondeados */
-    overflow: hidden; /* Asegura que el contenido no se desborde */
-}
-
-.carousel-inner {
-    width: 100%; /* Asegura que el contenido del carrusel ocupe el ancho completo */
-    height: 100%; /* Asegura que el contenido del carrusel ocupe toda la altura */
-}
-
-.carousel-item img {
-    width: 100%; /* Asegura que las imágenes ocupen todo el ancho disponible */
-    height: 100%; /* Asegura que las imágenes ocupen toda la altura disponible */
-    object-fit: cover; /* Asegura que las imágenes cubran el área sin distorsión */
-}
-
-.carousel-caption {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 10;
+    display: flex;
+    align-items: center;
     padding: 10px 20px;
-    color: rgb(27, 24, 24);
-    text-align: right;
-    text-shadow: 0 1px 2px rgba(173, 169, 169, 0.986);
-    background-color: rgba(0, 0, 0, 0); /* Fondo semitransparente */
-    border-radius: 0px; /* Bordes redondeados */
-}
+    border-radius: 5px;
+  }
 
-footer {
-    position: fixed;
-    bottom: 0;
-    width: calc(100% - 200px); /* Ajusta el ancho para evitar superposición con el menú */
-    background-color: #000000;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    padding: 10px 0;
-    border-top-left-radius: 0px; /* Bordes redondeados */
-}
-/* Fin del archivo styles.css */
+  .vertical-nav ul li a:hover {
+    background-color: #495057;
+  }
 
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-}
+  .main-content {
+    margin-left: 250px;
+    padding: 20px;
+  }
 
-.vertical-nav {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 200px;
-    background-color: rgba(3, 3, 3, 0.966); /* Color de fondo con transparencia */
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 20px;
-    z-index: 1000; /* Asegura que el menú esté sobre el contenido */
-}
-
-.vertical-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-}
-
-.vertical-nav ul li {
-    width: 100%;
-    text-align: center;
+  .hero-section {
     position: relative;
-}
+    max-width: 100%;
+  }
 
-.vertical-nav ul li a {
-    display: block;
-    padding: 15px 10px;
-    color: white;
-    text-decoration: none;
-    transition: background-color 0.3s;
-}
+  .carousel-item img {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+    height: auto; /* Mantiene la relación de aspecto */
+    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor sin distorsionar */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
 
-.vertical-nav ul li a:hover {
-    background-color: #a6a6ad;
-}
-
-.submenu {
-    display: none;
-    position: absolute;
-    left: 200px;
-    top: 0;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgb(0, 0, 0);
+  .carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
     padding: 10px;
-    width: 150px;
-    flex-direction: column;
-}
+  }
 
-.vertical-nav ul li:hover .submenu {
-    display: flex; /* Display submenu when parent li is hovered */
-}
-
-.submenu li {
-    margin: 10px 0;
-}
-
-.submenu li a {
-    display: flex;
-    align-items: center;
-    color: #080808;
-    text-decoration: none;
-}
-
-.submenu li a img {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
-    border-radius: 5px;
-}
-
-.submenu li a:hover {
-    text-decoration: underline;
-}
-
-.main-content {
-    margin-left: 20px; /* Ajusta el margen para evitar superposición con el menú */
-    padding: 20px; /* Añade padding para el contenido principal */
-    margin-right: 220px; /* Ajusta el margen derecho para el menú vertical */
-    height: calc(100% - 40px); /* Ajusta la altura para dejar espacio para el pie de página */
-}
-
-footer {
-    position: fixed;
-    bottom: 0;
-    width: calc(100% - 200px); /* Ajusta el ancho para evitar superposición con el menú */
-    background-color: #3f3e3e;
-    color: white;
+  footer {
     text-align: center;
     padding: 10px 0;
-    border-top-left-radius: 15px; /* Bordes redondeados */
-}
+    background-color: #343a40;
+    color: #fff;
+  }
+
+  /* Media Queries para dispositivos móviles */
+  @media (max-width: 768px) {
+    .vertical-nav {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+
+    .main-content {
+      margin-left: 0;
+    }
+  }
